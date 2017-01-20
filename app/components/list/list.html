@@ -1,0 +1,8 @@
+<ul>
+  <li ng-repeat="result in results"><ul>
+    <li><h1>{{result.company.name}} | {{result.name}}</h1></li>
+    <li><button type="button" ng-click="buttonFunc(result)"></button></li>
+    <li ng-bind-html="result.trustedResult"></li>
+    <li><a ng-href="{{result.refs.landing_page}}">Link here</a></li>
+  </ul></li>
+</ul>

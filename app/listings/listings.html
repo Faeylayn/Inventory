@@ -1,0 +1,29 @@
+<h1>Listings List (coming soon)</h1>
+
+<h3>Listings</h3>
+
+
+  <h5>Add New Listing</h5>
+  <label> Title
+    <input type="text" ng-model="ListingName">
+  </label>
+  <label> Company
+    <input type="text" ng-model="ListingCompany">
+  </label>
+  <label> Link (if possible)
+    <input type="text" ng-model="Link">
+  </label>
+  <label>HTML Details if available
+    <textarea ng-model="ResultPage"></textarea>
+  </label>
+
+  <button ng-click="addListing()" ng-disabled="!ListingName || !ListingCompany">Submit</button>
+
+
+<ul>
+  <li ng-repeat="listing in listings">
+    <span>Title: {{listing.ListingName}}  |  </span>
+    <span>Company: {{listing.ListingCompany}}  |  </span>
+    <a ng-show="listing.Link" href="{{listing.Link}}">Click here to go to the Muse</a>
+  </li>
+</ul>
